@@ -1,0 +1,35 @@
+version 7.1.5
+frameworks: net6.0
+
+# LINTING
+
+http https://gist.githubusercontent.com/wmarrujo/e158cd874f4cff9bd401510590f1d477/raw fsharplint.json
+
+# PUBLIC DEPENDENCIES
+source https://api.nuget.org/v3/index.json
+
+nuget Expecto ~> 9.0
+nuget Expecto.FsCheck ~> 9.0
+nuget CommandLineParser.FSharp ~> 2.9
+nuget Serilog ~> 2.10
+nuget Serilog.Sinks.Console ~> 4.0
+nuget Serilog.Sinks.File ~> 5.0
+
+# ADVISORY AEROSPACE DEPENDENCIES
+source https://nuget.pkg.github.com/AAOSC/index.json
+
+# Add AAOSC packages you need here
+
+group Fake
+    source https://api.nuget.org/v3/index.json
+    
+    nuget Fake.DotNet.Cli
+    nuget Fake.DotNet.Testing.Expecto
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.ReleaseNotes
+    nuget Fake.Core.Target
+    nuget Fake.Core.CommandLineParsing
+    nuget Fake.DotNet.Paket
+    nuget Fake.JavaScript.Npm
+    nuget Fake.Tools.Git
+    nuget FSharp.Json
